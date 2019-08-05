@@ -8,6 +8,12 @@ import {
   AuthServiceConfig,
   FacebookLoginProvider
 } from "angularx-social-login";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import {
+  MatIconModule,
+  MatButtonModule,
+  MatCardModule
+} from "@angular/material";
 
 const config = new AuthServiceConfig([
   {
@@ -22,7 +28,15 @@ export function provideConfig() {
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, SocialLoginModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    SocialLoginModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule
+  ],
   providers: [
     {
       provide: AuthServiceConfig,
